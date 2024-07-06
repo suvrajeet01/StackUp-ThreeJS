@@ -1,0 +1,391 @@
+[debug] [2024-07-06T20:58:14.066Z] ----------------------------------------------------------------------
+[debug] [2024-07-06T20:58:14.068Z] Command:       /home/gitpod/.nvm/versions/node/v20.15.0/bin/node /home/gitpod/.nvm/versions/node/v20.15.0/bin/firebase init
+[debug] [2024-07-06T20:58:14.068Z] CLI Version:   13.13.0
+[debug] [2024-07-06T20:58:14.068Z] Platform:      linux
+[debug] [2024-07-06T20:58:14.068Z] Node Version:  v20.15.0
+[debug] [2024-07-06T20:58:14.068Z] Time:          Sat Jul 06 2024 20:58:14 GMT+0000 (Coordinated Universal Time)
+[debug] [2024-07-06T20:58:14.069Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-06T20:58:14.073Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-06T20:58:14.073Z] > authorizing via signed-in user (suvrajeetbanerjee@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /workspace/StackUp-ThreeJS/introduction-three-js
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-07-06T21:02:29.141Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-07-06T21:02:29.141Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"suvrajeet-threejs-intro","name":"dist"}
+[debug] [2024-07-06T21:02:29.962Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2024-07-06T21:02:29.962Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.8282841087871930343"}
+[debug] [2024-07-06T21:02:29.963Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8282841087871930343 [none]
+[debug] [2024-07-06T21:02:30.247Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8282841087871930343 200
+[debug] [2024-07-06T21:02:30.247Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8282841087871930343 {"name":"operations/cp.8282841087871930343"}
+[debug] [2024-07-06T21:02:30.748Z] [Project Creation Poller] Retrying task index 0
+[debug] [2024-07-06T21:02:30.749Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8282841087871930343 [none]
+[debug] [2024-07-06T21:02:31.064Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8282841087871930343 200
+[debug] [2024-07-06T21:02:31.064Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8282841087871930343 {"name":"operations/cp.8282841087871930343","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","ready":true},"done":true,"error":{"code":9,"message":"Callers must accept Terms of Service","details":[{"@type":"type.googleapis.com/google.rpc.PreconditionFailure","violations":[{"type":"TOS","subject":"cloud","description":"Callers must accept Terms of Service"}]}]}}
+[debug] [2024-07-06T21:02:31.066Z] FirebaseError: Callers must accept Terms of Service
+    at OperationPoller.poll (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/operation-poller.js:24:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createCloudProject (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/management/projects.js:186:29)
+    at async createFirebaseProjectAndLog (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/management/projects.js:45:9)
+    at async promptAndCreateNewProject (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/init/features/project.js:32:12)
+    at async doSetup (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/init/features/project.js:88:27)
+    at async init (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/init/index.js:40:9)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2024-07-06T21:08:22.909Z] ----------------------------------------------------------------------
+[debug] [2024-07-06T21:08:22.910Z] Command:       /home/gitpod/.nvm/versions/node/v20.15.0/bin/node /home/gitpod/.nvm/versions/node/v20.15.0/bin/firebase init
+[debug] [2024-07-06T21:08:22.911Z] CLI Version:   13.13.0
+[debug] [2024-07-06T21:08:22.911Z] Platform:      linux
+[debug] [2024-07-06T21:08:22.911Z] Node Version:  v20.15.0
+[debug] [2024-07-06T21:08:22.911Z] Time:          Sat Jul 06 2024 21:08:22 GMT+0000 (Coordinated Universal Time)
+[debug] [2024-07-06T21:08:22.911Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-06T21:08:22.915Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-06T21:08:22.916Z] > authorizing via signed-in user (suvrajeetbanerjee@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /workspace/StackUp-ThreeJS/introduction-three-js
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-07-06T21:10:23.090Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-07-06T21:10:23.090Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"<suvrajeet>-threejs-intro","name":"<suvrajeet>-threejs-intro"}
+[debug] [2024-07-06T21:10:23.244Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2024-07-06T21:10:23.244Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"Request contains an invalid argument.","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"},{"field":"display_name","description":"project display name contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2024-07-06T21:10:23.246Z] FirebaseError: HTTP Error: 400, Request contains an invalid argument.
+    at responseToError (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/apiv2.js:305:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2024-07-06T21:10:52.591Z] ----------------------------------------------------------------------
+[debug] [2024-07-06T21:10:52.593Z] Command:       /home/gitpod/.nvm/versions/node/v20.15.0/bin/node /home/gitpod/.nvm/versions/node/v20.15.0/bin/firebase init
+[debug] [2024-07-06T21:10:52.593Z] CLI Version:   13.13.0
+[debug] [2024-07-06T21:10:52.593Z] Platform:      linux
+[debug] [2024-07-06T21:10:52.593Z] Node Version:  v20.15.0
+[debug] [2024-07-06T21:10:52.594Z] Time:          Sat Jul 06 2024 21:10:52 GMT+0000 (Coordinated Universal Time)
+[debug] [2024-07-06T21:10:52.594Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-06T21:10:52.597Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-06T21:10:52.598Z] > authorizing via signed-in user (suvrajeetbanerjee@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /workspace/StackUp-ThreeJS/introduction-three-js
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-07-06T21:12:55.990Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-07-06T21:12:55.990Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"<suvrajeet>-threejs-intro","name":"dist"}
+[debug] [2024-07-06T21:12:56.143Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2024-07-06T21:12:56.144Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"field [project_id] has issue [project_id contains invalid characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2024-07-06T21:12:56.145Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id contains invalid characters]
+    at responseToError (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/apiv2.js:305:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2024-07-06T21:13:16.966Z] ----------------------------------------------------------------------
+[debug] [2024-07-06T21:13:16.968Z] Command:       /home/gitpod/.nvm/versions/node/v20.15.0/bin/node /home/gitpod/.nvm/versions/node/v20.15.0/bin/firebase init
+[debug] [2024-07-06T21:13:16.969Z] CLI Version:   13.13.0
+[debug] [2024-07-06T21:13:16.969Z] Platform:      linux
+[debug] [2024-07-06T21:13:16.969Z] Node Version:  v20.15.0
+[debug] [2024-07-06T21:13:16.969Z] Time:          Sat Jul 06 2024 21:13:16 GMT+0000 (Coordinated Universal Time)
+[debug] [2024-07-06T21:13:16.969Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-06T21:13:16.973Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-06T21:13:16.974Z] > authorizing via signed-in user (suvrajeetbanerjee@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /workspace/StackUp-ThreeJS/introduction-three-js
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-07-06T21:16:01.765Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-07-06T21:16:01.766Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"suvrajeet-threejs-intro","name":"y"}
+[debug] [2024-07-06T21:16:01.887Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2024-07-06T21:16:01.887Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"field [display_name] has issue [project display name must be at least 4 characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"display_name","description":"project display name must be at least 4 characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2024-07-06T21:16:01.888Z] FirebaseError: HTTP Error: 400, field [display_name] has issue [project display name must be at least 4 characters]
+    at responseToError (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/apiv2.js:305:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2024-07-06T21:19:51.368Z] ----------------------------------------------------------------------
+[debug] [2024-07-06T21:19:51.370Z] Command:       /home/gitpod/.nvm/versions/node/v20.15.0/bin/node /home/gitpod/.nvm/versions/node/v20.15.0/bin/firebase init
+[debug] [2024-07-06T21:19:51.370Z] CLI Version:   13.13.0
+[debug] [2024-07-06T21:19:51.370Z] Platform:      linux
+[debug] [2024-07-06T21:19:51.370Z] Node Version:  v20.15.0
+[debug] [2024-07-06T21:19:51.370Z] Time:          Sat Jul 06 2024 21:19:51 GMT+0000 (Coordinated Universal Time)
+[debug] [2024-07-06T21:19:51.370Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-06T21:19:51.374Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-06T21:19:51.375Z] > authorizing via signed-in user (suvrajeetbanerjee@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /workspace/StackUp-ThreeJS/introduction-three-js
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-07-06T21:20:43.256Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-07-06T21:20:43.256Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"suvrajeet-threejs-intro","name":"threejs-proj"}
+[debug] [2024-07-06T21:20:44.351Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2024-07-06T21:20:44.351Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.5837128607208153772"}
+[debug] [2024-07-06T21:20:44.352Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5837128607208153772 [none]
+[debug] [2024-07-06T21:20:44.944Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5837128607208153772 200
+[debug] [2024-07-06T21:20:44.944Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5837128607208153772 {"name":"operations/cp.5837128607208153772","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","ready":true},"done":true,"error":{"code":9,"message":"Callers must accept Terms of Service","details":[{"@type":"type.googleapis.com/google.rpc.PreconditionFailure","violations":[{"type":"TOS","subject":"cloud","description":"Callers must accept Terms of Service"}]}]}}
+[debug] [2024-07-06T21:20:44.946Z] FirebaseError: Callers must accept Terms of Service
+    at OperationPoller.poll (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/operation-poller.js:24:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createCloudProject (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/management/projects.js:186:29)
+    at async createFirebaseProjectAndLog (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/management/projects.js:45:9)
+    at async promptAndCreateNewProject (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/init/features/project.js:32:12)
+    at async doSetup (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/init/features/project.js:88:27)
+    at async init (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/init/index.js:40:9)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2024-07-06T21:21:48.200Z] ----------------------------------------------------------------------
+[debug] [2024-07-06T21:21:48.202Z] Command:       /home/gitpod/.nvm/versions/node/v20.15.0/bin/node /home/gitpod/.nvm/versions/node/v20.15.0/bin/firebase init
+[debug] [2024-07-06T21:21:48.202Z] CLI Version:   13.13.0
+[debug] [2024-07-06T21:21:48.203Z] Platform:      linux
+[debug] [2024-07-06T21:21:48.203Z] Node Version:  v20.15.0
+[debug] [2024-07-06T21:21:48.203Z] Time:          Sat Jul 06 2024 21:21:48 GMT+0000 (Coordinated Universal Time)
+[debug] [2024-07-06T21:21:48.203Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-06T21:21:48.207Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-06T21:21:48.207Z] > authorizing via signed-in user (suvrajeetbanerjee@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /workspace/StackUp-ThreeJS/introduction-three-js
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-07-06T21:22:05.492Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-07-06T21:22:05.492Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"suvrajeet-threejs-intro","name":"suvrajeet"}
+[debug] [2024-07-06T21:22:05.886Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2024-07-06T21:22:05.886Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.8123969322911910164"}
+[debug] [2024-07-06T21:22:05.887Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8123969322911910164 [none]
+[debug] [2024-07-06T21:22:06.257Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8123969322911910164 200
+[debug] [2024-07-06T21:22:06.257Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8123969322911910164 {"name":"operations/cp.8123969322911910164"}
+[debug] [2024-07-06T21:22:06.758Z] [Project Creation Poller] Retrying task index 0
+[debug] [2024-07-06T21:22:06.758Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8123969322911910164 [none]
+[debug] [2024-07-06T21:22:07.122Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8123969322911910164 200
+[debug] [2024-07-06T21:22:07.122Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8123969322911910164 {"name":"operations/cp.8123969322911910164","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","ready":true},"done":true,"error":{"code":9,"message":"Callers must accept Terms of Service","details":[{"@type":"type.googleapis.com/google.rpc.PreconditionFailure","violations":[{"type":"TOS","subject":"cloud","description":"Callers must accept Terms of Service"}]}]}}
+[debug] [2024-07-06T21:22:07.123Z] FirebaseError: Callers must accept Terms of Service
+    at OperationPoller.poll (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/operation-poller.js:24:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createCloudProject (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/management/projects.js:186:29)
+    at async createFirebaseProjectAndLog (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/management/projects.js:45:9)
+    at async promptAndCreateNewProject (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/init/features/project.js:32:12)
+    at async doSetup (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/init/features/project.js:88:27)
+    at async init (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/init/index.js:40:9)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2024-07-06T21:23:45.081Z] ----------------------------------------------------------------------
+[debug] [2024-07-06T21:23:45.083Z] Command:       /home/gitpod/.nvm/versions/node/v20.15.0/bin/node /home/gitpod/.nvm/versions/node/v20.15.0/bin/firebase init
+[debug] [2024-07-06T21:23:45.083Z] CLI Version:   13.13.0
+[debug] [2024-07-06T21:23:45.083Z] Platform:      linux
+[debug] [2024-07-06T21:23:45.083Z] Node Version:  v20.15.0
+[debug] [2024-07-06T21:23:45.083Z] Time:          Sat Jul 06 2024 21:23:45 GMT+0000 (Coordinated Universal Time)
+[debug] [2024-07-06T21:23:45.083Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-06T21:23:45.087Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-06T21:23:45.088Z] > authorizing via signed-in user (suvrajeetbanerjee@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /workspace/StackUp-ThreeJS/introduction-three-js
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-07-06T21:24:15.852Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-07-06T21:24:15.852Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"suvrajeet-threejs-intro","name":"suvrajeet-threejs-intro"}
+[debug] [2024-07-06T21:24:16.728Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2024-07-06T21:24:16.728Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.7932453272915095905"}
+[debug] [2024-07-06T21:24:16.729Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7932453272915095905 [none]
+[debug] [2024-07-06T21:24:17.060Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7932453272915095905 200
+[debug] [2024-07-06T21:24:17.060Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7932453272915095905 {"name":"operations/cp.7932453272915095905"}
+[debug] [2024-07-06T21:24:17.561Z] [Project Creation Poller] Retrying task index 0
+[debug] [2024-07-06T21:24:17.562Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7932453272915095905 [none]
+[debug] [2024-07-06T21:24:17.878Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7932453272915095905 200
+[debug] [2024-07-06T21:24:17.878Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7932453272915095905 {"name":"operations/cp.7932453272915095905","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","ready":true},"done":true,"error":{"code":9,"message":"Callers must accept Terms of Service","details":[{"@type":"type.googleapis.com/google.rpc.PreconditionFailure","violations":[{"type":"TOS","subject":"cloud","description":"Callers must accept Terms of Service"}]}]}}
+[debug] [2024-07-06T21:24:17.880Z] FirebaseError: Callers must accept Terms of Service
+    at OperationPoller.poll (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/operation-poller.js:24:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createCloudProject (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/management/projects.js:186:29)
+    at async createFirebaseProjectAndLog (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/management/projects.js:45:9)
+    at async promptAndCreateNewProject (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/init/features/project.js:32:12)
+    at async doSetup (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/init/features/project.js:88:27)
+    at async init (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/init/index.js:40:9)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2024-07-06T21:25:43.538Z] ----------------------------------------------------------------------
+[debug] [2024-07-06T21:25:43.540Z] Command:       /home/gitpod/.nvm/versions/node/v20.15.0/bin/node /home/gitpod/.nvm/versions/node/v20.15.0/bin/firebase init
+[debug] [2024-07-06T21:25:43.540Z] CLI Version:   13.13.0
+[debug] [2024-07-06T21:25:43.540Z] Platform:      linux
+[debug] [2024-07-06T21:25:43.540Z] Node Version:  v20.15.0
+[debug] [2024-07-06T21:25:43.540Z] Time:          Sat Jul 06 2024 21:25:43 GMT+0000 (Coordinated Universal Time)
+[debug] [2024-07-06T21:25:43.540Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-06T21:25:43.544Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-06T21:25:43.545Z] > authorizing via signed-in user (suvrajeetbanerjee@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /workspace/StackUp-ThreeJS/introduction-three-js
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-07-06T21:26:06.462Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-07-06T21:26:06.462Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"suvrajeet-threejs-intro","name":"dist"}
+[debug] [2024-07-06T21:26:07.492Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2024-07-06T21:26:07.493Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.5403213450029591248"}
+[debug] [2024-07-06T21:26:07.493Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5403213450029591248 [none]
+[debug] [2024-07-06T21:26:07.983Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5403213450029591248 200
+[debug] [2024-07-06T21:26:07.984Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5403213450029591248 {"name":"operations/cp.5403213450029591248","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","ready":true},"done":true,"error":{"code":9,"message":"Callers must accept Terms of Service","details":[{"@type":"type.googleapis.com/google.rpc.PreconditionFailure","violations":[{"type":"TOS","subject":"cloud","description":"Callers must accept Terms of Service"}]}]}}
+[debug] [2024-07-06T21:26:07.985Z] FirebaseError: Callers must accept Terms of Service
+    at OperationPoller.poll (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/operation-poller.js:24:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createCloudProject (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/management/projects.js:186:29)
+    at async createFirebaseProjectAndLog (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/management/projects.js:45:9)
+    at async promptAndCreateNewProject (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/init/features/project.js:32:12)
+    at async doSetup (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/init/features/project.js:88:27)
+    at async init (/home/gitpod/.nvm/versions/node/v20.15.0/lib/node_modules/firebase-tools/lib/init/index.js:40:9)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
